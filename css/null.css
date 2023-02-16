@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*====================Flexbox==============================*/
 /*====================Обнуление стилей====================*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;700&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -39,7 +40,7 @@ body {
   font-size: 100%;
   line-height: 1;
   font-size: 14px;
-  font-family: "";
+  font-family: "Nunito Sans";
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -56,7 +57,7 @@ body.lock {
 }
 
 input, button, textarea {
-  font-family: "";
+  font-family: "Nunito Sans";
 }
 
 input::-ms-clear {
@@ -100,11 +101,11 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 .container {
-  max-width: 1046px;
+  max-width: 1160px;
   margin: 0 auto;
   width: 100%;
 }
-@media (max-width: 1058px) {
+@media (max-width: 1172px) {
   .container {
     max-width: 750px;
   }

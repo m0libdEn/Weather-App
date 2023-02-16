@@ -1,3 +1,182 @@
+<<<<<<< HEAD
+@import "null.scss";
+
+body{
+    height: 95vh;
+}
+
+.weather__input {
+    @include flexbox();
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.search {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    width: 560px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 10px;
+    color: #5D6C71;
+    backdrop-filter: blur(28px);
+    margin-right: 20px;
+}
+.button{
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 10px;
+    color: #000000;
+    backdrop-filter: blur(28px);
+}
+.weather__body {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+.weather__body-name {
+    font-family: 'Nunito Sans';
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 87px;
+}
+.weather__body-info {
+    @include flexbox();
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+    flex: 0 1 66%;
+    padding-top: 88px;
+    padding-bottom: 88px;
+    justify-content: center;
+}
+.stat-temperature {
+    @include flexbox();
+    h2{
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 200;
+        font-size: 144px;
+        line-height: 173px;
+        color: #000000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-right: 140px;
+    }
+    img{
+        max-height: 160px;
+    }
+    margin-bottom: 20px;
+}
+.stat-date {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 36px;
+    line-height: 120%;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+}
+.stat-additional {
+    @include flexbox();
+    justify-content: space-between; 
+}
+.additional__wind {
+    img{
+        max-height: 28px;
+    }
+    @include flexbox();
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 28px;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.additional__hum {
+    @include flexbox();
+    img{
+        max-height: 28px;
+    }
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 28px;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.additional__rain {
+    @include flexbox();
+    img{
+        max-height: 28px;
+    }
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.weather__body-container{
+    @include flexbox();
+    justify-content: space-between;
+    align-items: center;
+}
+.ibg{
+    min-height: 100%;
+    min-width: 1024px;
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    /* Set up positioning */
+    position: fixed;
+    z-index: -1;
+}
+
+.additional{
+    margin-right: 20px;
+    img{
+        padding-right: 10px;
+    }
+}
+.dates__body {
+    @include flexbox();
+    justify-content: space-between;
+}
+.dates__body-info {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    text-align: center;
+    padding: 25px;
+    border-radius: 8px;
+}
+.dates__temp {
+    font-family: 'Nunito Sans';
+    font-weight: 200;
+    font-size: 40px;
+    line-height: 120%;
+}
+.dates__icon {
+    max-height: 158px;
+    padding: 4px 0px;
+}
+.dates__date {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 120%;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+=======
 @import "null.scss";
 
 body{
@@ -60,3 +239,4 @@ button{
     background-color: white;
     padding: 50px;
 }
+>>>>>>> b544480aca00e3e814867e76cf50cc5262d7012a

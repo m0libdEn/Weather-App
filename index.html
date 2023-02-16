@@ -5,26 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Weather App</title>
+    <title>Weatheaer App</title>
 </head>
 <body>
  <div class="wrapper">
-    <body>
-       <div class="info">
-       <div class="panel">
-           <div class="weather-info">
-            <h1 class="weather-tittle">Weather App</h1>
-            <p>Type valid name of City</p>
-           </div>
-               <div class="weather-input">
-                <input id="search" type="text" placeholder="Enter of city">
-                <button id="btn">Get Temp</button>
-               </div>
-               <h1 id="log">&nbsp</h1>
-                <img id="ibg" class="ibg" src="" alt="ibg">
-           </div>
-       </div>
-    </body>
+    <div class="weather__input">
+        <div class="weather__container container">
+            <input type="text" class="search" placeholder="Search a city" id="search">
+        </div>
+    </div>
+    <div class="weather__body">
+        <div class="weather__body-container container">
+            <div class="weather__body-name">
+                <h1><span id="cityName">Hi</span>, <br><span id="CountryName">Welcome!</span></h1>
+            </div>
+            <div class="weather__body-info">
+                <div class="info__stat">
+                    <div class="stat-temperature">
+                        <h2><span id="tempToday">19</span>°</h2>
+                        <img src="img/weather_icons/Clear.svg" alt="tempIcon" id="1stDayIcon">
+                    </div>
+                    <div class="stat-date"><span id="day">10th</span><span>Aug</span><span>2020</span></div>
+                    <div class="stat-additional">
+                        <div class="additional__wind additional">
+                            <img src="img/stat_icons/wind.svg" alt="wind">
+                            <p class="wind">Wind: <span id="wind">20</span>km/h</p>
+                        </div>
+                        <div class="additional__hum additional">
+                            <img src="img/stat_icons/hum.svg" alt="hum">
+                            <p class="wind">Hum: <span id="hum">54</span>%</p></p>
+                        </div>
+                        <div class="additional__rain additional">
+                            <img src="img/stat_icons/rain.svg" alt="rain">
+                            <p class="wind">Rain: <span id="rain">0.2</span>%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="weather__dates">
+        <div class="weather__dates-container container">
+            <div class="dates__body">
+                <div class="dates__body-info">
+                    <div class="dates__temp"><span id="2ndDayTemp">19</span>°</div>
+                    <img src="img/weather_icons/Clear.svg" alt="" class="dates__icon" id="2ndDayIcon">
+                    <div class="dates__date">10th Aug 2020</div>
+                </div>
+                <div class="dates__body-info">
+                    <div class="dates__temp"><span id="3rdDayTemp">19</span>°</div>
+                    <img src="img/weather_icons/Clear.svg" alt="1st day" class="dates__icon" id="3rdDayIcon">
+                    <div class="dates__date">10th Aug 2020</div>
+                </div>
+                <div class="dates__body-info">
+                    <div class="dates__temp"><span id="4thDayTemp">19</span>°</div>
+                    <img src="img/weather_icons/Clear.svg" alt="1st day" class="dates__icon" id="4thDayIcon">
+                    <div class="dates__date">10th Aug 2020</div>
+                </div>
+                <div class="dates__body-info">
+                    <div class="dates__temp"><span id="5thDayTemp">19</span>°</div>
+                    <img src="img/weather_icons/Clear.svg" alt="1st day" class="dates__icon" id="5thDayIcon">
+                    <div class="dates__date">10th Aug 2020</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img id="ibg" class="ibg" src="img/bgd.jpg" alt="">
  </div> 
  <script src="js/main.js"></script>
 </body>
