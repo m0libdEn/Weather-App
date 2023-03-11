@@ -38,9 +38,6 @@ const search = document.getElementById('search')
 const btn = document.getElementById('btn')
 const wallpaper = document.getElementById('ibg')
 
-
-
-
 const getWeather = (city) =>{
     const day= new Date()
     day.setDate(day.getDate())
@@ -93,7 +90,6 @@ function ibg(){
 
 function changeIconSetting(icon, typeOfWeather){
     icon.src = `img/weather_icons/${typeOfWeather}.svg`
-    icon.style.maxHeight = '160px';
 }
 
 search.addEventListener('keyup', function(el){
