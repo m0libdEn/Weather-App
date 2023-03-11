@@ -39,7 +39,7 @@ body {
 body.lock {
   overflow: hidden;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 710px) {
   body.lock {
     width: 100%;
     position: fixed;
