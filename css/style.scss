@@ -276,7 +276,7 @@ body{
         text-align: center;
     }
     .dates__icon{
-        max-height: 80px;
+        max-height: 65px;
     }
     .dates__body-info{
         padding: 8px;
@@ -292,10 +292,13 @@ body{
        h2{
         font-size: 96px;
         line-height: normal;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
        }
     }
     .search{
         width: 95vw;
+    }
+    .dates__date{
+        font-size: 10px;
     }
 }
