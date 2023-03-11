@@ -408,4 +408,7 @@ body {
     line-height: normal;
     margin-bottom: 50px;
   }
+  .search {
+    width: 95vw;
+  }
 }/*# sourceMappingURL=style.css.map */
