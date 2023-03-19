@@ -336,6 +336,7 @@ body {
   .stat-temperature {
     flex-direction: column;
     justify-content: center;
+    text-align: center;
   }
   .stat-temperature h2 {
     margin: 0;
