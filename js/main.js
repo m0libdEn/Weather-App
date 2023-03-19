@@ -38,6 +38,9 @@ const search = document.getElementById('search')
 const btn = document.getElementById('btn')
 const wallpaper = document.getElementById('ibg')
 
+const celcius = document.getElementById('celcius')
+const farenheit = document.getElementById('farenheit')
+
 const getWeather = (city) =>{
     const day= new Date()
     day.setDate(day.getDate())
@@ -51,17 +54,18 @@ const getWeather = (city) =>{
         countryOfLocation.innerHTML = country
         loadIbg(city, country)
         updateInfo(todayWeather, todayIcon, data.list[0].main.temp, data.list[0].weather[0].main)
+        console.log(data.list[0]);
         wind.innerHTML =  Math.round(data.list[0].wind.speed*3.6)
         hum.innerHTML = data.list[0].main.humidity
         rain.innerHTML = data.list[0].pop*100 
         changeDateInfo(todayDate,todayMonth,todayYear,day)
-        updateInfo(secondDayWeather, secondDayIcon, data.list[12].main.temp, data.list[12].weather[0].main)
+        updateInfo(secondDayWeather, secondDayIcon, data.list[14].main.temp, data.list[12].weather[0].main)
         changeDateInfo(secondDate,secondMonth,secondYear,day)
-        updateInfo(thirdDayWeather, thirdDayIcon, data.list[20].main.temp, data.list[20].weather[0].main)
+        updateInfo(thirdDayWeather, thirdDayIcon, data.list[22].main.temp, data.list[20].weather[0].main)
         changeDateInfo(thirdDate,thirdMonth,thirdYear,day)
-        updateInfo(forthDayWeather, forthDayIcon, data.list[28].main.temp, data.list[28].weather[0].main)
+        updateInfo(forthDayWeather, forthDayIcon, data.list[30].main.temp, data.list[28].weather[0].main)
         changeDateInfo(forthDate,forthMonth,forthYear,day)
-        updateInfo(fifthDayWeather, fifthDayIcon, data.list[36].main.temp, data.list[36].weather[0].main)
+        updateInfo(fifthDayWeather, fifthDayIcon, data.list[38].main.temp, data.list[36].weather[0].main)
         changeDateInfo(fithDate,fithMonth,fithYear,day)
     })
     .catch(function(){
@@ -105,7 +109,11 @@ search.addEventListener('click', function(el){
 })
 
 function updateInfo(day, icon, temperature, weather){
-    day.innerHTML = Math.round(temperature - 273)
+    if (celcius.classList.contains('active')) {
+        day.innerHTML = Math.round(temperature - 273)
+    }else{
+        day.innerHTML = Math.round(temperature*(9/5)-459.67)
+    }
     changeIconSetting(icon, weather)
 }
 
@@ -146,4 +154,21 @@ function changeDateInfo(whichDate, whichMonth ,whichYear, day){
     outputMonth(day.getMonth(), whichMonth)
     whichYear.innerHTML = day.getFullYear()
     day.setDate(day.getDate()+1)
+}
+
+celcius.addEventListener('click', function(){
+    switchTemp(celcius, farenheit)
+    getWeather(cityOfLocation.textContent)
+})
+
+farenheit.addEventListener('click', function(){
+    switchTemp(farenheit, celcius)
+    getWeather(cityOfLocation.textContent)
+})
+
+function switchTemp(temp1, temp2){
+    if (!(temp1.classList.contains('active'))) {
+        temp2.classList.remove('active')
+        temp1.classList.add('active')
+    }
 }

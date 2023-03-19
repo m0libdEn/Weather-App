@@ -153,15 +153,15 @@ body {
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   border-radius: 8px;
-  flex: 0 1 66%;
-  padding-top: 88px;
-  padding-bottom: 88px;
+  flex: 0 1 70%;
+  padding: 88px 0px;
   justify-content: center;
 }
 
 .stat-temperature {
   display: flex;
   font-size: 0;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 .stat-temperature h2 {
@@ -172,7 +172,6 @@ body {
   line-height: 173px;
   color: #000000;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-right: 140px;
 }
 .stat-temperature img {
   max-height: 160px;
@@ -194,47 +193,11 @@ body {
   font-size: 0;
   justify-content: space-between;
 }
-
-.additional__wind {
-  display: flex;
-  font-size: 0;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 28px;
-  color: #000000;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.additional__wind img {
+.stat-additional img {
   max-height: 28px;
 }
-
-.additional__hum {
-  display: flex;
-  font-size: 0;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 28px;
-  color: #000000;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.additional__hum img {
-  max-height: 28px;
-}
-
-.additional__rain {
-  display: flex;
-  font-size: 0;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 28px;
-  color: #000000;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.additional__rain img {
-  max-height: 28px;
+.stat-additional *:last-child {
+  margin-right: 0px;
 }
 
 .weather__body-container {
@@ -255,7 +218,17 @@ body {
 }
 
 .additional {
-  margin-right: 20px;
+  display: flex;
+  font-size: 0;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  color: #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-right: 30px;
 }
 .additional img {
   padding-right: 10px;
@@ -297,13 +270,31 @@ body {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.stat-value {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 120%;
+  color: black;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.stat-value span {
+  cursor: pointer;
+}
+
+.active {
+  font-weight: 700;
+}
+
 @media (max-width: 1172px) {
   .weather__body-name h1 {
     font-size: 48px;
     line-height: 1.2;
   }
   .stat-temperature {
-    align-items: center;
+    justify-content: space-between;
     margin-bottom: 10px;
   }
   .stat-temperature h2 {

@@ -48,13 +48,13 @@ body{
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(20px);
     border-radius: 8px;
-    flex: 0 1 66%;
-    padding-top: 88px;
-    padding-bottom: 88px;
+    flex: 0 1 70%;
+    padding: 88px 0px;
     justify-content: center;
 }
 .stat-temperature {
     @include flexbox();
+    justify-content: space-between;
     h2{
         font-family: 'Nunito Sans';
         font-style: normal;
@@ -63,7 +63,6 @@ body{
         line-height: 173px;
         color: #000000;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        margin-right: 140px;
     }
     img{
         max-height: 160px;
@@ -83,44 +82,14 @@ body{
 .stat-additional {
     @include flexbox();
     justify-content: space-between; 
-}
-.additional__wind {
     img{
         max-height: 28px;
     }
-    @include flexbox();
-    font-style: normal;
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 28px;
-    color: #000000;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-}
-
-.additional__hum {
-    @include flexbox();
-    img{
-        max-height: 28px;
+    *{
+     &:last-child{
+        margin-right: 0px;
+     }
     }
-    font-style: normal;
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 28px;
-    color: #000000;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.additional__rain {
-    @include flexbox();
-    img{
-        max-height: 28px;
-    }
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 28px;
-    color: #000000;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .weather__body-container{
@@ -139,10 +108,19 @@ body{
 }
 
 .additional{
-    margin-right: 20px;
     img{
         padding-right: 10px;
     }
+    @include flexbox();
+    align-items:center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-right: 30px;
 }
 .dates__body {
     @include flexbox();
@@ -174,6 +152,22 @@ body{
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.stat-value{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 120%;
+    color: black;
+    text-align: center;
+    margin-bottom: 40px;
+    span{
+        cursor:pointer;
+    }
+}
+.active{
+    font-weight: 700;
+}
 
 @media (max-width:$md1) {
     .weather__body-name{
@@ -183,7 +177,7 @@ body{
         }
     }
     .stat-temperature{
-        align-items:center;
+        justify-content: space-between;
         h2{
             font-size: 96px;
         }
