@@ -125,6 +125,7 @@ body{
 .dates__body {
     @include flexbox();
     justify-content: space-between;
+    text-decoration: none;
 }
 .dates__body-info {
     background: rgba(255, 255, 255, 0.5);
@@ -140,7 +141,7 @@ body{
     line-height: 120%;
 }
 .dates__icon {
-    max-height: 158px;
+    max-height: 150px;
     padding: 4px 0px;
 }
 .dates__date {
@@ -296,4 +297,46 @@ body{
     .dates__date{
         font-size: 10px;
     }
+}
+
+.popup {
+    @include flexbox();
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+.popup-body {
+}
+.popup-content {
+}
+.popup__info {
+    font-size: 48px;
+    width: 45%;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+    padding: 20px 88px 88px 88px;
+}
+.popup__close{
+    color:#000000;
+    font-size: 48px;
+    margin-bottom: 68px;
+    margin-right: -50px;
+    text-align: end;
+}
+a{
+    text-decoration: none;
+    color:#000000
 }

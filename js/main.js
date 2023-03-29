@@ -1,35 +1,47 @@
-const todayWeather = document.getElementById('tempToday')
-const todayIcon = document.getElementById('1stDayIcon')
+const todayWeather = document.getElementsByClassName('tempToday')
+const todayIcon = document.getElementsByClassName('1stDayIcon')
 const wind = document.getElementById('wind')
 const hum = document.getElementById('hum')
 const rain = document.getElementById('rain')
-const todayDate = document.getElementById('TodayDate')
-const todayMonth = document.getElementById('TodayMonth')
-const todayYear = document.getElementById('TodayYear')
+const todayDate = document.getElementsByClassName('TodayDate')
+const todayMonth = document.getElementsByClassName('TodayMonth')
+const todayYear = document.getElementsByClassName('TodayYear')
 
-const secondDayWeather = document.getElementById('2ndDayTemp')
-const secondDayIcon = document.getElementById('2ndDayIcon')
-const secondDate = document.getElementById('SecondDate')
-const secondMonth = document.getElementById('SecondMonth')
-const secondYear = document.getElementById('SecondYear')
+const secondDayWeather = document.getElementsByClassName('2ndDayTemp')
+const secondDayIcon = document.getElementsByClassName('2ndDayIcon')
+const secondDate = document.getElementsByClassName('SecondDate')
+const secondMonth = document.getElementsByClassName('SecondMonth')
+const secondYear = document.getElementsByClassName('SecondYear')
+const secondWind = document.getElementById('secondWind')
+const secondHum = document.getElementById('secondHum')
+const secondRain = document.getElementById('secondRain')
 
-const thirdDayWeather = document.getElementById('3rdDayTemp')
-const thirdDayIcon = document.getElementById('3rdDayIcon')
-const thirdDate = document.getElementById('ThirdDate')
-const thirdMonth = document.getElementById('ThirdMonth')
-const thirdYear = document.getElementById('ThirdYear')
+const thirdDayWeather = document.getElementsByClassName('3rdDayTemp')
+const thirdDayIcon = document.getElementsByClassName('3rdDayIcon')
+const thirdDate = document.getElementsByClassName('ThirdDate')
+const thirdMonth = document.getElementsByClassName('ThirdMonth')
+const thirdYear = document.getElementsByClassName('ThirdYear')
+const thirdWind = document.getElementById('thirdWind')
+const thirdHum = document.getElementById('thirdHum')
+const thirdRain = document.getElementById('thirdRain')
 
-const forthDayWeather = document.getElementById('4thDayTemp')
-const forthDayIcon = document.getElementById('4thDayIcon')
-const forthDate = document.getElementById('ForthDate')
-const forthMonth = document.getElementById('ForthMonth')
-const forthYear = document.getElementById('ForthYear')
+const forthDayWeather = document.getElementsByClassName('4thDayTemp')
+const forthDayIcon = document.getElementsByClassName('4thDayIcon')
+const forthDate = document.getElementsByClassName('ForthDate')
+const forthMonth = document.getElementsByClassName('ForthMonth')
+const forthYear = document.getElementsByClassName('ForthYear')
+const forthWind = document.getElementById('forthWind')
+const forthHum = document.getElementById('forthHum')
+const forthRain = document.getElementById('forthRain')
 
-const fifthDayWeather = document.getElementById('5thDayTemp')
-const fifthDayIcon = document.getElementById('5thDayIcon')
-const fithDate = document.getElementById('FithDate')
-const fithMonth = document.getElementById('FithMonth')
-const fithYear = document.getElementById('FithYear')
+const fifthDayWeather = document.getElementsByClassName('5thDayTemp')
+const fifthDayIcon = document.getElementsByClassName('5thDayIcon')
+const fithDate = document.getElementsByClassName('FithDate')
+const fithMonth = document.getElementsByClassName('FithMonth')
+const fithYear = document.getElementsByClassName('FithYear')
+const fithWind = document.getElementById('fifthWind')
+const fithHum = document.getElementById('fifthHum')
+const fithRain = document.getElementById('fifthRain')
 
 const cityOfLocation = document.getElementById('cityName')
 const countryOfLocation = document.getElementById('CountryName')
@@ -54,19 +66,30 @@ const getWeather = (city) =>{
         countryOfLocation.innerHTML = country
         loadIbg(city, country)
         updateInfo(todayWeather, todayIcon, data.list[0].main.temp, data.list[0].weather[0].main)
-        console.log(data.list[0]);
         wind.innerHTML =  Math.round(data.list[0].wind.speed*3.6)
-        hum.innerHTML = data.list[0].main.humidity
-        rain.innerHTML = data.list[0].pop*100 
+        hum.innerHTML = Math.round(data.list[0].main.humidity)
+        rain.innerHTML = Math.round(data.list[0].pop*100)
         changeDateInfo(todayDate,todayMonth,todayYear,day)
-        updateInfo(secondDayWeather, secondDayIcon, data.list[14].main.temp, data.list[12].weather[0].main)
+        updateInfo(secondDayWeather, secondDayIcon, data.list[14].main.temp, data.list[14].weather[0].main)
         changeDateInfo(secondDate,secondMonth,secondYear,day)
-        updateInfo(thirdDayWeather, thirdDayIcon, data.list[22].main.temp, data.list[20].weather[0].main)
+        secondWind.innerHTML =  Math.round(data.list[14].wind.speed*3.6)
+        secondHum.innerHTML = Math.round(data.list[14].main.humidity)
+        secondRain.innerHTML = Math.round(data.list[14].pop*100) 
+        updateInfo(thirdDayWeather, thirdDayIcon, data.list[22].main.temp, data.list[22].weather[0].main)
         changeDateInfo(thirdDate,thirdMonth,thirdYear,day)
-        updateInfo(forthDayWeather, forthDayIcon, data.list[30].main.temp, data.list[28].weather[0].main)
+        thirdWind.innerHTML =  Math.round(data.list[22].wind.speed*3.6)
+        thirdHum.innerHTML = Math.round(data.list[22].main.humidity)
+        thirdRain.innerHTML = Math.round(data.list[22].pop*100)
+        updateInfo(forthDayWeather, forthDayIcon, data.list[30].main.temp, data.list[30].weather[0].main)
         changeDateInfo(forthDate,forthMonth,forthYear,day)
+        forthWind.innerHTML =  Math.round(data.list[30].wind.speed*3.6)
+        forthHum.innerHTML = Math.round(data.list[30].main.humidity)
+        forthRain.innerHTML = Math.round(data.list[30].pop*100)
         updateInfo(fifthDayWeather, fifthDayIcon, data.list[38].main.temp, data.list[36].weather[0].main)
         changeDateInfo(fithDate,fithMonth,fithYear,day)
+        fifthWind.innerHTML =  Math.round(data.list[38].wind.speed*3.6)
+        fifthHum.innerHTML = Math.round(data.list[38].main.humidity)
+        fifthHum.innerHTML = Math.round(data.list[38].pop*100)
     })
     .catch(function(){
         search.value = 'The name of city is incorrect or we dot have it in our base, try again!'
@@ -109,12 +132,14 @@ search.addEventListener('click', function(el){
 })
 
 function updateInfo(day, icon, temperature, weather){
-    if (celcius.classList.contains('active')) {
-        day.innerHTML = Math.round(temperature - 273)
-    }else{
-        day.innerHTML = Math.round(temperature*(9/5)-459.67)
+    for (let index = 0; index < day.length; index++) {
+        if (celcius.classList.contains('active')) {
+            day[index].innerHTML = Math.round(temperature - 273)
+        }else{
+            day[index].innerHTML = Math.round(temperature*(9/5)-459.67)
+        }
+        changeIconSetting(icon[index], weather)
     }
-    changeIconSetting(icon, weather)
 }
 
 function outputMonth(number, month){
@@ -150,10 +175,13 @@ function changeNameOfDay(number){
 }
 
 function changeDateInfo(whichDate, whichMonth ,whichYear, day){
-    whichDate.innerHTML = changeNameOfDay(day.getDate())
-    outputMonth(day.getMonth(), whichMonth)
-    whichYear.innerHTML = day.getFullYear()
-    day.setDate(day.getDate()+1)
+    console.log(day);
+   for (let index = 0; index < whichDate.length; index++) {
+    whichDate[index].innerHTML = changeNameOfDay(day.getDate())
+    outputMonth(day.getMonth(), whichMonth[index])
+    whichYear[index].innerHTML = day.getFullYear()
+   }
+   day.setDate(day.getDate()+1)
 }
 
 celcius.addEventListener('click', function(){

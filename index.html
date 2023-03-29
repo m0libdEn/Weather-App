@@ -22,14 +22,14 @@
             <div class="weather__body-info">
                 <div class="info__stat">
                     <div class="stat-temperature">
-                        <h2><span id="tempToday">19</span>°</h2>
-                        <img src="img/weather_icons/Clear.svg" alt="tempIcon" id="1stDayIcon">
+                        <h2><span class="tempToday">19</span>°</h2>
+                        <img src="img/weather_icons/Clear.svg" alt="tempIcon" id="1stDayIcon" class="1stDayIcon">
                     </div>
                     <div class="stat-value">
                         <span class="vlaue-celcius active" id="celcius">C°</span> | 
                         <span class="vlaue-farenheit" id="farenheit">F°</span> 
                     </div>
-                    <div class="stat-date"><span id="TodayDate">10th</span> <span id="TodayMonth">Aug</span> <span id="TodayYear">2020</span></div>
+                    <div class="stat-date"><span class="TodayDate">10th</span> <span class="TodayMonth">Aug</span> <span class="TodayYear">2020</span></div>
                     <div class="stat-additional">
                         <div class="additional__wind additional">
                             <img src="img/stat_icons/wind.svg" alt="wind">
@@ -51,31 +51,160 @@
     <div class="weather__dates">
         <div class="weather__dates-container container">
             <div class="dates__body">
+                <a href="#popup1">
+                    <div class="dates__body-info">
+                    <div class="dates__temp"><span class="2ndDayTemp">19</span>°</div>
+                    <img src="img/weather_icons/Clear.svg" alt="2n day" class="dates__icon 2ndDayIcon">
+                    <div class="dates__date"><span class="SecondDate">10th</span> <span class="SecondMonth">Aug</span> <span class="SecondYear">2020</span></div>
+                    </div>
+                </a>
+                <a href="#popup2">
+                    <div class="dates__body-info">
+                        <div class="dates__temp"><span class ="3rdDayTemp" id="3rdDayTemp">19</span>°</div>
+                        <img src="img/weather_icons/Clear.svg" alt="3rd day" class="dates__icon 3rdDayIcon">
+                        <div class="dates__date"><span class="ThirdDate">10th</span> <span class="ThirdMonth">Aug</span> <span class="ThirdYear">2020</span></div>
+                    </div>
+                </a>
                 <div class="dates__body-info">
-                    <div class="dates__temp"><span id="2ndDayTemp">19</span>°</div>
-                    <img src="img/weather_icons/Clear.svg" alt="" class="dates__icon" id="2ndDayIcon">
-                    <div class="dates__date"><span id="SecondDate">10th</span> <span id="SecondMonth">Aug</span> <span id="SecondYear">2020</span></div>
+                    <a href="#popup3">
+                        <div class="dates__temp"><span class ="4thDayTemp" id="4thDayTemp">19</span>°</div>
+                        <img src="img/weather_icons/Clear.svg" alt="1st day" class="dates__icon 4thDayIcon">
+                        <div class="dates__date"><span class="ForthDate">10th</span> <span class="ForthMonth">Aug</span> <span class="ForthYear">2020</span></div>
+                    </a>
                 </div>
                 <div class="dates__body-info">
-                    <div class="dates__temp"><span id="3rdDayTemp">19</span>°</div>
-                    <img src="img/weather_icons/Clear.svg" alt="1st day" class="dates__icon" id="3rdDayIcon">
-                    <div class="dates__date"><span id="ThirdDate">10th</span> <span id="ThirdMonth">Aug</span> <span id="ThirdYear">2020</span></div>
-                </div>
-                <div class="dates__body-info">
-                    <div class="dates__temp"><span id="4thDayTemp">19</span>°</div>
-                    <img src="img/weather_icons/Clear.svg" alt="1st day" class="dates__icon" id="4thDayIcon">
-                    <div class="dates__date"><span id="ForthDate">10th</span> <span id="ForthMonth">Aug</span> <span id="ForthYear">2020</span></div>
-                </div>
-                <div class="dates__body-info">
-                    <div class="dates__temp"><span id="5thDayTemp">19</span>°</div>
-                    <img src="img/weather_icons/Clear.svg" alt="1st day" class="dates__icon" id="5thDayIcon">
-                    <div class="dates__date"><span id="FithDate">10th</span><span id="FithMonth">Aug</span> <span id="FithYear">2020</span></div>
+                    <a href="#popup4">
+                        <div class="dates__temp"><span class ="5thDayTemp" id="5thDayTemp">19</span>°</div>
+                        <img src="img/weather_icons/Clear.svg" alt="1st day" class="dates__icon 5thDayIcon" >
+                        <div class="dates__date"><span class ="FithDate">10th</span> <span class="FithMonth">Aug</span> <span class="FithYear">2020</span></div>
+                    </a> 
                 </div>
             </div>
         </div>
     </div>
     <img id="ibg" class="ibg" src="img/bgd.jpg" alt="">
  </div> 
+ </div>
+ <div id="popup1" class="popup popup1">
+    <div class="popup__info">
+        <div class="info__stat">
+            <div class="popup__close"><a href="#">x</a></div>
+            <div class="stat-temperature">
+                <h2><span class="2ndDayTemp">19</span>°</h2>
+                <img src="img/weather_icons/Clear.svg" alt="tempIcon" class="2ndDayIcon">
+            </div>
+            <div class="stat-value">
+                <span class="vlaue-celcius active" id="celcius">C°</span> | 
+                <span class="vlaue-farenheit" id="farenheit">F°</span> 
+            </div>
+            <div class="stat-date"><span class="SecondDate">10th</span> <span class="SecondMonth">Aug</span> <span class="SecondYear">2020</span></div>
+            <div class="stat-additional">
+                <div class="additional__wind additional">
+                    <img src="img/stat_icons/wind.svg" alt="wind">
+                    <p class="wind">Wind: <span id="secondWind">20</span>km/h</p>
+                </div>
+                <div class="additional__hum additional">
+                    <img src="img/stat_icons/hum.svg" alt="hum">
+                    <p class="wind">Hum: <span id="secondHum">54</span>%</p></p>
+                </div>
+                <div class="additional__rain additional">
+                    <img src="img/stat_icons/rain.svg" alt="rain">
+                    <p class="wind">Rain: <span id="secondRain">0.2</span>%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+ <div id="popup2" class="popup popup1">
+    <div class="popup__info">
+        <div class="info__stat">
+            <div class="popup__close"><a href="#">x</a></div>
+            <div class="stat-temperature">
+                <h2><span class="3rdDayTemp">19</span>°</h2>
+                <img src="img/weather_icons/Clear.svg" alt="tempIcon" class="3rdDayIcon">
+            </div>
+            <div class="stat-value">
+                <span class="vlaue-celcius active" id="celcius">C°</span> | 
+                <span class="vlaue-farenheit" id="farenheit">F°</span> 
+            </div>
+            <div class="stat-date"><span class="ThirdDate">10th</span> <span class="ThirdMonth">Aug</span> <span class="ThirdYear">2020</span></div>
+            <div class="stat-additional">
+                <div class="additional__wind additional">
+                    <img src="img/stat_icons/wind.svg" alt="wind">
+                    <p class="wind">Wind: <span id="thirdWind">20</span>km/h</p>
+                </div>
+                <div class="additional__hum additional">
+                    <img src="img/stat_icons/hum.svg" alt="hum">
+                    <p class="wind">Hum: <span id="thirdHum">54</span>%</p></p>
+                </div>
+                <div class="additional__rain additional">
+                    <img src="img/stat_icons/rain.svg" alt="rain">
+                    <p class="wind">Rain: <span id="thirdRain">0.2</span>%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+ <div id="popup3"class="popup popup3">
+    <div class="popup__info">
+        <div class="info__stat">
+            <div class="popup__close"><a href="#">x</a></div>
+            <div class="stat-temperature">
+                <h2><span class="4thDayTemp">19</span>°</h2>
+                <img src="img/weather_icons/Clear.svg" alt="tempIcon" class="4thDayIcon">
+            </div>
+            <div class="stat-value">
+                <span class="vlaue-celcius active" id="celcius">C°</span> | 
+                <span class="vlaue-farenheit" id="farenheit">F°</span> 
+            </div>
+            <div class="stat-date"><span class="ForthDate">10th</span> <span class="ForthMonth">Aug</span> <span class="ForthYear">2020</span></div>
+            <div class="stat-additional">
+                <div class="additional__wind additional">
+                    <img src="img/stat_icons/wind.svg" alt="wind">
+                    <p class="wind">Wind: <span id="forthWind">20</span>km/h</p>
+                </div>
+                <div class="additional__hum additional">
+                    <img src="img/stat_icons/hum.svg" alt="hum">
+                    <p class="wind">Hum: <span id="forthHum">54</span>%</p></p>
+                </div>
+                <div class="additional__rain additional">
+                    <img src="img/stat_icons/rain.svg" alt="rain">
+                    <p class="wind">Rain: <span id="forthRain">0.2</span>%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+ <div id="popup4" class="popup popup4">
+    <div class="popup__info">
+        <div class="info__stat">
+            <div class="popup__close"><a href="#">x</a></div>
+            <div class="stat-temperature">
+                <h2><span class="5thDayTemp">19</span>°</h2>
+                <img src="img/weather_icons/Clear.svg" alt="tempIcon" class="5thDayIcon">
+            </div>
+            <div class="stat-value">
+                <span class="vlaue-celcius active" id="celcius">C°</span> | 
+                <span class="vlaue-farenheit" id="farenheit">F°</span> 
+            </div>
+            <div class="stat-date"><span class="FithDate">10th</span> <span class="FithMonth">Aug</span> <span class="FithYear">2020</span></div>
+            <div class="stat-additional">
+                <div class="additional__wind additional">
+                    <img src="img/stat_icons/wind.svg" alt="wind">
+                    <p class="wind">Wind: <span id="fifthWind">20</span>km/h</p>
+                </div>
+                <div class="additional__hum additional">
+                    <img src="img/stat_icons/hum.svg" alt="hum">
+                    <p class="wind">Hum: <span id="fifthHum">54</span>%</p></p>
+                </div>
+                <div class="additional__rain additional">
+                    <img src="img/stat_icons/rain.svg" alt="rain">
+                    <p class="wind">Rain: <span id="fifthRain">0.2</span>%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
  <script src="js/main.js"></script>
 </body>
 </html>
